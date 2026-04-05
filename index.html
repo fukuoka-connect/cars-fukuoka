@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cars Fukuoka | ランクル専門店 福岡</title>
+<meta name="description" content="福岡県粕屋郡宇美町のランクル専門中古車販売店。ランドクルーザー60/70/80系、クロカン4WDの販売・カスタムを一台ずつ丁寧に。全国納車対応。">
+<meta property="og:title" content="Cars Fukuoka | ランクル専門店 福岡">
+<meta property="og:description" content="ランドクルーザー60/70/80系専門の中古車販売・カスタムショップ。福岡から全国納車対応。">
+<meta property="og:url" content="https://cars-fukuoka.jp/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://cars-fukuoka.jp/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+/* ========== RESET & BASE ========== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #0a0a0a;
+  --surface: #161616;
+  --card: #1c1c1c;
+  --text: #f0f0eb;
+  --text-muted: #999;
+  --accent: #06C755;
+  --accent-hover: #05b34a;
+  --border: #2a2a2a;
+  --radius: 20px;
+  --section-py: clamp(80px, 10vw, 140px);
+  --section-px: clamp(24px, 5vw, 80px);
+  --heading-mb: clamp(40px, 5vw, 64px);
+  --card-gap: clamp(20px, 3vw, 32px);
+  --card-pad: clamp(28px, 4vw, 40px);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 15px;
+  line-height: 1.85;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; border: none; cursor: pointer; background: none; }
+
+.font-display {
+  font-family: "Bebas Neue", Impact, sans-serif;
+  letter-spacing: .04em;
+  line-height: 1.1;
+}
+.font-ui {
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ========== LAYOUT UTILS ========== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: var(--section-px);
+  padding-right: var(--section-px);
+}
+.section {
+  padding-top: var(--section-py);
+  padding-bottom: var(--section-py);
+}
+.section-heading {
+  text-align: center;
+  margin-bottom: var(--heading-mb);
+}
+.section-heading .font-ui { margin-bottom: 12px; }
+.section-heading h2 {
+  font-size: clamp(28px, 4vw, 44px);
+}
+.bg-dark { background: var(--bg); }
+.bg-surface { background: var(--surface); }
+
+/* ========== CARD ========== */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--card-pad);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,.5);
+}
+
+/* ========== GRID ========== */
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--card-gap); }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--card-gap); }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--card-gap); }
+
+@media (max-width: 1024px) {
+  .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+}
+
+/* ========== CTA BUTTON ========== */
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 17px;
+  padding: 18px 40px;
+  border-radius: 999px;
+  transition: background .2s ease, transform .15s ease;
+}
+.cta-btn:hover { background: var(--accent-hover); transform: scale(1.02); }
+.cta-btn svg { width: 22px; height: 22px; flex-shrink: 0; }
+
+.cta-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  font-weight: 700;
+  padding: 14px 36px;
+  border-radius: 999px;
+  transition: background .2s, color .2s;
+}
+.cta-outline:hover { background: var(--accent); color: #fff; }
+
+.loss-text {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 16px;
+  opacity: .7;
+}
+
+/* LINE SVG icon */
+.line-icon { fill: currentColor; }
+
+/* ========== NAV ========== */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(10,10,10,.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  height: 64px;
+}
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--section-px);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 22px;
+  letter-spacing: .04em;
+}
+.nav-logo span { color: var(--accent); }
+.nav-links {
+  display: flex; align-items: center; gap: 28px;
+  list-style: none;
+}
+.nav-links a {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 13px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color .2s;
+}
+.nav-links a:hover { color: var(--accent); }
+.nav-phone {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+.nav-cta {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 8px 20px;
+  border-radius: 999px;
+}
+.nav-hamburger { display: none; color: var(--text); padding: 8px; }
+
+@media (max-width: 900px) {
+  .nav-links, .nav-phone { display: none; }
+  .nav-hamburger { display: block; }
+}
+
+/* ========== HERO ========== */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 650px;
+  overflow: hidden;
+  background: var(--bg);
+}
+.hero-slide {
+  position: absolute; inset: 0;
+  transition: opacity 1s ease;
+}
+.hero-slide img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, var(--bg) 0%, rgba(10,10,10,.55) 50%, transparent 100%);
+}
+.hero-content {
+  position: relative; z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: clamp(100px, 14vh, 160px);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: var(--section-px);
+  padding-right: var(--section-px);
+}
+.hero-label { margin-bottom: 16px; }
+.hero h1 {
+  font-size: clamp(40px, 8vw, 96px);
+  margin-bottom: 20px;
+}
+.hero-desc {
+  color: var(--text-muted);
+  font-size: clamp(15px, 2vw, 18px);
+  max-width: 520px;
+  margin-bottom: 32px;
+  line-height: 1.8;
+}
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+.hero-badge {
+  background: rgba(28,28,28,.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+.hero-badge .star { color: #facc15; }
+.hero-dots {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex; gap: 8px; z-index: 3;
+}
+.hero-dot {
+  width: 8px; height: 8px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.25);
+  transition: all .3s;
+  padding: 0; border: none;
+}
+.hero-dot.active {
+  background: var(--accent);
+  width: 24px;
+}
+
+/* ========== STRIP ========== */
+.strip {
+  background: var(--accent);
+  color: #fff;
+  padding: 24px 0;
+}
+.strip-inner {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.strip-item {
+  text-align: center;
+  padding: 8px 24px;
+}
+.strip-value {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.1;
+}
+.strip-label {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  opacity: .85;
+  margin-top: 4px;
+}
+
+/* ========== TROUBLE ========== */
+.trouble-card {
+  text-align: center;
+}
+.trouble-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.trouble-card h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.trouble-card p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+/* ========== GALLERY ========== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(8px, 1.5vw, 16px);
+}
+.gallery-item {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #111;
+}
+.gallery-item img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+.gallery-item:hover img { transform: scale(1.05); }
+
+@media (max-width: 640px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ========== STRENGTHS ========== */
+.strength-num {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 48px;
+  color: var(--accent);
+  opacity: .35;
+  line-height: 1;
+}
+.strength-card h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 16px 0 12px;
+}
+.strength-card p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+/* ========== CTA BAND ========== */
+.cta-band {
+  background: linear-gradient(135deg, rgba(6,199,85,.1) 0%, rgba(6,199,85,.03) 100%);
+  border-top: 1px solid rgba(6,199,85,.15);
+  border-bottom: 1px solid rgba(6,199,85,.15);
+  text-align: center;
+}
+.cta-band h2 {
+  font-size: clamp(24px, 3.5vw, 38px);
+  margin-bottom: 20px;
+}
+.cta-band > .container > p {
+  color: var(--text-muted);
+  max-width: 500px;
+  margin: 0 auto 36px;
+}
+
+/* ========== INVENTORY ========== */
+.inv-card {
+  padding: 0;
+  overflow: hidden;
+}
+.inv-img {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: #111;
+}
+.inv-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.inv-badge {
+  position: absolute;
+  top: 14px; right: 14px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 999px;
+}
+.inv-info {
+  padding: 24px 28px 28px;
+  border-top: 1px solid var(--border);
+}
+.inv-info h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.inv-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.inv-specs {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.9;
+}
+.inv-price {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 28px;
+  color: var(--accent);
+  line-height: 1;
+}
+
+/* ========== CUSTOM MENU ========== */
+.custom-icon {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.custom-card h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.custom-card p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+/* ========== FLOW ========== */
+.flow-list {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.flow-step {
+  display: flex;
+  gap: 28px;
+  padding-bottom: 48px;
+  position: relative;
+}
+.flow-step:last-child { padding-bottom: 0; }
+.flow-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 24px;
+  top: 56px;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent), var(--border));
+}
+.flow-num {
+  flex-shrink: 0;
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 22px;
+  position: relative;
+  z-index: 1;
+}
+.flow-body { padding-top: 4px; }
+.flow-body h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.flow-body p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+/* ========== REVIEWS ========== */
+.review-stars {
+  color: #facc15;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+.review-card p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.85;
+  margin-bottom: 24px;
+}
+.review-footer {
+  border-top: 1px solid var(--border);
+  padding-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.review-name { font-weight: 700; font-size: 14px; }
+.review-meta { font-size: 12px; color: var(--text-muted); }
+
+/* ========== PRICE ANCHOR ========== */
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 36px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+@media (max-width: 640px) {
+  .price-grid { grid-template-columns: 1fr; }
+}
+.price-card {
+  border-radius: var(--radius);
+  padding: clamp(32px, 5vw, 48px);
+  text-align: center;
+}
+.price-card.competitor {
+  background: var(--card);
+  border: 1px solid var(--border);
+  opacity: .6;
+}
+.price-card.ours {
+  background: var(--card);
+  border: 2px solid var(--accent);
+  position: relative;
+}
+.price-badge {
+  position: absolute;
+  top: -14px; left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 18px;
+  border-radius: 999px;
+}
+.price-label {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 14px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.price-card.ours .price-label { color: var(--accent); }
+.price-value {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(40px, 6vw, 56px);
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+.price-card.competitor .price-value {
+  text-decoration: line-through;
+  text-decoration-color: rgba(239,68,68,.5);
+}
+.price-card.ours .price-value { color: var(--accent); }
+.price-list {
+  list-style: none;
+  text-align: left;
+  font-size: 14px;
+  line-height: 2;
+}
+.price-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.price-list .icon-x { color: #ef4444; }
+.price-list .icon-check { color: var(--accent); }
+.price-note {
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 40px;
+}
+
+/* ========== NEWS ========== */
+.news-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.news-item + .news-item { margin-top: 20px; }
+.news-date {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 14px;
+  color: var(--accent);
+  letter-spacing: .05em;
+}
+.news-item h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+.news-item p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+@media (min-width: 641px) {
+  .news-item {
+    flex-direction: row;
+    gap: 28px;
+    align-items: flex-start;
+  }
+  .news-date { flex-shrink: 0; margin-top: 3px; }
+  .news-item h3 + p { margin-top: 0; }
+}
+
+/* ========== SHOP INFO ========== */
+.shop-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+}
+@media (max-width: 768px) {
+  .shop-grid { grid-template-columns: 1fr; }
+}
+.shop-table {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: clamp(28px, 4vw, 44px);
+}
+.shop-table table { width: 100%; border-collapse: collapse; }
+.shop-table th, .shop-table td {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  vertical-align: top;
+}
+.shop-table tr:last-child th,
+.shop-table tr:last-child td { border-bottom: none; }
+.shop-table th {
+  font-weight: 700;
+  color: var(--text-muted);
+  width: 80px;
+  padding-right: 20px;
+  white-space: nowrap;
+}
+.shop-table a { color: var(--accent); }
+.shop-map {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  min-height: 320px;
+}
+.shop-map iframe {
+  width: 100%; height: 100%;
+  min-height: 320px;
+  border: 0;
+}
+
+/* ========== FAQ ========== */
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.faq-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.faq-q {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 28px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text);
+  background: none;
+  transition: background .2s;
+}
+.faq-q:hover { background: rgba(255,255,255,.03); }
+.faq-icon {
+  flex-shrink: 0;
+  color: var(--accent);
+  font-size: 22px;
+  transition: transform .3s;
+  margin-left: 16px;
+}
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease;
+}
+.faq-a-inner {
+  padding: 8px 28px 28px;
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.85;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  background: #000;
+  border-top: 1px solid var(--border);
+  padding: 64px 0 40px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+@media (max-width: 768px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+}
+.footer h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  letter-spacing: .05em;
+}
+.footer-brand {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+.footer-brand span { color: var(--accent); }
+.footer-info {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+.footer-links {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.footer-links a {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 14px;
+  color: var(--text-muted);
+  transition: color .2s;
+}
+.footer-links a:hover { color: var(--accent); }
+.footer-contact {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 2;
+}
+.footer-contact a { color: var(--accent); }
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ========== MOBILE CTA BAR ========== */
+.mobile-cta {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(10,10,10,.95);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border);
+  padding: 12px 20px;
+  gap: 12px;
+  align-items: center;
+}
+.mobile-cta .cta-btn {
+  flex: 1;
+  justify-content: center;
+  font-size: 15px;
+  padding: 14px 20px;
+  min-height: 48px;
+}
+.mobile-cta .phone-btn {
+  width: 48px; height: 48px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .mobile-cta { display: flex; }
+  body { padding-bottom: 80px; }
+}
+
+/* ========== MOBILE NAV MENU ========== */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 64px; left: 0; right: 0;
+  z-index: 99;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 20px var(--section-px) 24px;
+}
+.mobile-menu.open { display: block; }
+.mobile-menu a {
+  display: block;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 15px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  transition: color .2s;
+}
+.mobile-menu a:last-child { border-bottom: none; }
+.mobile-menu a:hover { color: var(--accent); }
+</style>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AutoDealer","name":"Cars Fukuoka","alternateName":"Cars☆Fukuoka","description":"ランドクルーザー60/70/80系専門の中古車販売・カスタムショップ","url":"https://cars-fukuoka.jp/","telephone":"092-719-0033","address":{"@type":"PostalAddress","streetAddress":"貴船3-13-12","addressLocality":"宇美町","addressRegion":"福岡県","postalCode":"811-2131","addressCountry":"JP"},"geo":{"@type":"GeoCoordinates","latitude":33.5669,"longitude":130.5076},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:00","closes":"19:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday"],"opens":"10:00","closes":"19:00"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"85","bestRating":"5"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"在庫にない車両も探してもらえますか？","acceptedAnswer":{"@type":"Answer","text":"はい、全国のオークションや提携業者から、お客様のご希望に合う車両をお探しします。"}},{"@type":"Question","name":"遠方からの購入は可能ですか？","acceptedAnswer":{"@type":"Answer","text":"全国納車に対応しています。LINEやビデオ通話での現車確認も可能です。"}},{"@type":"Question","name":"ローンは利用できますか？","acceptedAnswer":{"@type":"Answer","text":"各種オートローンに対応しています。お客様のご予算に合わせた最適なプランをご提案いたします。"}}]}
+</script>
+</head>
+
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">CARS<span>&#9733;</span>FUKUOKA</a>
+    <ul class="nav-links">
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#custom">Custom</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#inventory">Stock</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:16px;">
+      <a href="tel:092-719-0033" class="nav-phone">092-719-0033</a>
+      <a href="https://lin.ee/XXXXXXX" target="_blank" rel="noopener" class="nav-cta">LINE</a>
+    </div>
+    <button class="nav-hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="メニュー">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu">
+  <a href="#gallery" onclick="this.parentElement.classList.remove('open')">Gallery</a>
+  <a href="#about" onclick="this.parentElement.classList.remove('open')">About</a>
+  <a href="#custom" onclick="this.parentElement.classList.remove('open')">Custom</a>
+  <a href="#reviews" onclick="this.parentElement.classList.remove('open')">Reviews</a>
+  <a href="#inventory" onclick="this.parentElement.classList.remove('open')">Stock</a>
+  <a href="#shop" onclick="this.parentElement.classList.remove('open')">Shop</a>
+  <a href="#faq" onclick="this.parentElement.classList.remove('open')">FAQ</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-slide" id="slide-0"><img src="images/image001.webp" alt="Cars Fukuoka"></div>
+  <div class="hero-slide" id="slide-1" style="opacity:0"><img src="images/image003.webp" alt="Cars Fukuoka"></div>
+  <div class="hero-slide" id="slide-2" style="opacity:0"><img src="images/image005.webp" alt="Cars Fukuoka"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="font-ui hero-label">Land Cruiser Specialist</p>
+    <h1 class="font-display">CREATING<br>BESPOKE VEHICLES</h1>
+    <p class="hero-desc">一台ずつ、あなただけのランクルを。<br>福岡のランドクルーザー専門店</p>
+    <div class="hero-badges">
+      <span class="hero-badge"><span class="star">&#9733;</span> 4.9 評価</span>
+      <span class="hero-badge">40台+ 在庫</span>
+      <span class="hero-badge">85件+ レビュー</span>
+    </div>
+    <div>
+      <a href="https://lin.ee/XXXXXXX" target="_blank" rel="noopener" class="cta-btn">
+        <svg viewBox="0 0 24 24" class="line-icon"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596a.626.626 0 01-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.271.173-.51.43-.595a.62.62 0 01.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+        LINEで無料相談
+      </a>
+      <p class="loss-text">※ 人気車両は入庫後すぐに売約済みになることがあります</p>
+    </div>
+  </div>
+  <div class="hero-dots">
+    <button class="hero-dot active" onclick="goSlide(0)"></button>
+    <button class="hero-dot" onclick="goSlide(1)"></button>
+    <button class="hero-dot" onclick="goSlide(2)"></button>
+  </div>
+</section>
+
+<!-- ===== STRIP ===== -->
+<section class="strip">
+  <div class="container strip-inner">
+    <div class="strip-item"><div class="strip-value">4.9</div><div class="strip-label">Google評価</div></div>
+    <div class="strip-item"><div class="strip-value">40+</div><div class="strip-label">常時在庫</div></div>
+    <div class="strip-item"><div class="strip-value">85+</div><div class="strip-label">お客様レビュー</div></div>
+    <div class="strip-item"><div class="strip-value">20年+</div><div class="strip-label">業界経験</div></div>
+  </div>
+</section>
+
+<!-- ===== TROUBLE ===== -->
+<section class="section bg-surface">
+  <div class="container">
+    <div class="section-heading">
+      <p class="font-ui">Concerns</p>
+      <h2 class="font-display">こんなお悩みありませんか？</h2>
+    </div>
+    <div class="grid-4">
+      <div class="card trouble-card"><div class="trouble-icon">&#128176;</div><h3>予算が不安…</h3><p>中間マージンなしの直販価格。大手チェーンより数十万円お得に手に入る可能性があります。</p></div>
+      <div class="card trouble-card"><div class="trouble-icon">&#128270;</div><h3>状態が心配…</h3><p>2級整備士資格保持スタッフが一台一台丁寧に点検。購入前に詳細な状態レポートをお渡しします。</p></div>
+      <div class="card trouble-card"><div class="trouble-icon">&#128295;</div><h3>好みにカスタムしたい…</h3><p>リフトアップ・全塗装・内装まで、購入と同時にカスタムを一括でオーダー可能。</p></div>
+      <div class="card trouble-card"><div class="trouble-icon">&#127757;</div><h3>遠方で見に行けない…</h3><p>LINEで写真・動画を共有。ビデオ通話での現車確認にも対応。全国納車OK。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section id="gallery" class="section bg-dark">
+  <div class="container">
+    <div class="section-heading">
+      <p class="font-ui">Gallery</p>
+      <h2 class="font-display">CARS FUKUOKA</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="images/image001.webp" alt="ランドクルーザー80"></div>
+      <div class="gallery-item"><img src="images/image003.webp" alt="カスタム車両"></div>
+      <div class="gallery-item"><img src="images/image005.webp" alt="整備工場"></div>
+      <div class="gallery-item"><img src="images/image001.webp" alt="ランドクルーザー70"></div>
+      <div class="gallery-item"><img src="images/image003.webp" alt="エクステリア"></div>
+      <div class="gallery-item"><img src="images/image005.webp" alt="インテリア"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STRENGTHS ===== -->
+<section id="about" class="section bg-surface">
+  <div class="container">
+    <div class="section-heading">
+      <p class="font-ui">Why Choose Us</p>
+      <h2 class="font-display">CARS FUKUOKA が選ばれる理由</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card strength-card"><div class="strength-num">01</div><h3>高評価レビュー</h3><p>Google口コミ4.9。お客様満足度の高さが私たちの自信です。</p></div>
+      <div class="card strength-card"><div class="strength-num">02</div><h3>ランクル専門の知識</h3><p>60/70/80系を知り尽くしたスタッフが、最適な一台をご提案します。</p></div>
+      <div class="card strength-card"><div class="strength-num">03</div><h3>一対一の丁寧な対応</h3><p>大型店にはできない、お一人おひとりに寄り添った接客を大切にしています。</p></div>
+      <div class="card strength-card"><div class="strength-num">04</div><h3>明朗会計</h3><p>車両価格・諸費用・カスタム費用を全て明確にご提示。後から追加費用は一切なし。</p></div>
+      <div class="card strength-card"><div class="strength-num">05</div><h3>ワンストップサービス</h3><p>販売・カスタム・整備・車検まで全てお任せ。窓口は一つだから安心。</p></div>
+      <div class="card strength-card"><div class="strength-num">06</div><h3>全国納車対応</h3><p>福岡から日本全国へ。遠方のお客様もLINEとビデオ通話で安心してご購入いただけます。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA MID ===== -->
+<section class="section cta-band">
+  <div class="container">
+    <p class="font-ui">Contact Us</p>
+    <h2 class="font-display">気になる車両、ありましたか？</h2>
+    <p>LINEで写真・動画をお送りします。まずはお気軽にご相談ください。</p>
+    <a href="https://lin.ee/XXXXXXX" target="_blank" rel="noopener" class="cta-btn">
+      <svg viewBox="0 0 24 24" class="line-icon"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596a.626.626 0 01-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.271.173-.51.43-.595a.62.62 0 01.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+      LINEで無料相談
+    </a>
+    <p class="loss-text">※ 好条件の車両ほど早く売約済みになります。お早めにご相談ください</p>
+  </div>
+</section>
+
+<!-- ===== INVENTORY ===== -->
+<section id="inventory" class="section bg-dark">
+  <div class="container">
+    <div class="section-heading">
+      <p class="font-ui">Stock List</p>
+      <h2 class="font-display">在庫一覧</h2>
+      <p style="color:var(--text-muted);font-size:14px;margin-top:16px;">※ 下記は一部です。最新の在庫状況はLINEでお問い合わせください</p>
+    </div>
+    <div class="grid-3">
+      <div class="card inv-card"><div class="inv-img"><img src="images/image001.webp" alt="ランドクルーザー80 VXリミテッド"><span class="inv-badge">人気</span></div><div class="inv-info"><h3>ランドクルーザー80 VXリミテッド</h3><div class="inv-meta"><div class="inv-specs">1995年式<br>12.5万km</div><div class="inv-price">258万円</div></div></div></div>
+      <div class="card inv-card"><div class="inv-img"><img src="images/image003.webp" alt="ランドクルーザー70 ZX"><span class="inv-badge">希少</span></div><div class="inv-info"><h3>ランドクルーザー70 ZX</h3><div class="inv-meta"><div class="inv-specs">1993年式<br>9.8万km</div><div class="inv-price">328万円</div></div></div></div>
+      <div class="card inv-card"><div class="inv-img"><img src="images/image005.webp" alt="ランドクルーザー60 GX"></div><div class="inv-info"><h3>ランドクルーザー60 GX</h3><div class="inv-meta"><div class="inv-specs">1988年式<br>15.2万km</div><div class="inv-price">198万円</div></div></div></div>
+      <div class="card inv-card"><div class="inv-img"><img src="images/image001.webp" alt="ランドクルーザー80 VX"><span class="inv-badge">カスタム済</span></div><div class="inv-info"><h3>ランドクルーザー80 VX</h3><div class="inv-meta"><div class="inv-specs">1997年式<br>10.1万km</div><div class="inv-price">288万円</div></div></div></div>
+      <div class="card inv-card"><div class="inv-img"><img src="images/image003.webp" alt="ランドクルーザー70 LX"></div><div class="inv-info"><h3>ランドクルーザー70 LX</h3><div class="inv-meta"><div class="inv-specs">1990年式<br>13.7万km</div><div class="inv-price">238万円</div></div></div></div>
+      <div class="card inv-card"><div class="inv-img"><img src="images/image005.webp" alt="ランドクルーザー60 VX"><span class="inv-badge">NEW</span></div><div class="inv-info"><h3>ランドクルーザー60 VX</h3><div class="inv-meta"><div class="inv-specs">1986年式<br>16.8万km</div><div class="inv-price">178万円</div></div></div></div>
+    </div>
+    <div style="text-align:center;margin-top:48px;">
+      <a href="https://lin.ee/XXXXXXX" target="_blank" rel="noopener" class="cta-outline">全在庫をLINEで確認する</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CUSTOM ===== -->
+<section id="custom" class="section bg-surface">
+  <div class="container">
+    <div class="section-heading">
+      <p class="font-ui">Custom Menu</p>
+      <h2 class="font-display">カスタムメニュー</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card custom-card"><div class="custom-icon">&#8593;</div><h3>リフトアップ</h3><p>2インチ〜6インチまで、走行シーンに合わせた最適なリフトアップをご提案。足回りのトータルセッティングで走りも快適に。</p></div>
+      <div class="card custom-card"><div class="custom-icon">&#127912;</div><h3>全塗装・オールペイント</h3><p>ボディカラーを一新。マット・グロス・ツートンなど、こだわりのカラーリングを実現します。</p></div>
+      <div class="card custom-card"><div class="custom-icon">&#9881;</div><h3>シュノーケル・エクステリア</h3><p>シュノーケル・バンパー・ルーフラックなど、本格クロカン仕様へのカスタムに対応。</p></div>
+      <div class="card custom-card"><div class="custom-icon">&#128168;</div><h3>マフラー・排気系</h3><p>迫力のサウンドからジェントルな音量まで。車検対応マフラーもご用意しています。</p></div>
+      <div class="card custom-card"><div class="custom-icon">&#9898;</div><h3>ホイール・タイヤ</h3><p>ヴィンテージスタイルからモダンまで。タイヤサイズの変更に伴うギア比の調整もお任せ。</p></div>
+      <div class="card custom-card"><div class="custom-icon">&#128186;</div><h3>インテリア</h3><p>シートカバー・ステアリング・メーターパネルなど、室内空間もこだわりの仕上がりに。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FLOW ===== -->
+<section class="section bg-dark">
+  <div class="container">
+    <div class="section-heading">
+      <p class="font-ui">Purchase Flow</p>
+      <h2 class="font-display">ご購入の流れ</h2>
+    </div>
+    <div class="flow-list">
+      <div class="flow-step"><div class="flow-num">1</div><div class="flow-body"><h3>LINEで相談</h3><p>ご希望の車種・予算・カスタム内容をお気軽にお伝えください。</p></div></div>
+      <div class="flow-step"><div class="flow-num">2</div><div class="flow-body"><h3>写真・動画で確認</h3><p>気になる車両の詳細写真・動画をLINEでお送りします。ビデオ通話もOK。</p></div></div>
+      <div class="flow-step"><div class="flow-num">3</div><div class="flow-body"><h3>ご来店 or 遠隔商談</h3><p>福岡近郊の方はご来店を。遠方の方はLINE・電話で完結できます。</p></div></div>
+      <div class="flow-step"><div class="flow-num">4</div><div class="flow-body"><h3>整備・カスタム</h3><p>ご成約後、ご要望に合わせて整備・カスタムを実施します。</p></div></div>
+      <div class="flow-step"><div class="flow-num">5</div><div class="flow-body"><h3>納車</h3><p>店頭お引き渡し or 全国陸送にて納車。アフターサポートも万全です。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section id="reviews" class="section bg-surface">
+  <div class="container">
+    <div class="section-heading">
+      <p class="font-ui">Customer Reviews</p>
+      <h2 class="font-display">お客様の声</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>ずっと探していた80を最高の状態で手に入れることができました。スタッフの知識が豊富で、細かい質問にも丁寧に答えてくれました。</p><div class="review-footer"><span class="review-name">T.K 様</span><span class="review-meta">ランドクルーザー80 / 福岡県</span></div></div>
+      <div class="card review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>遠方でしたがLINEでのやり取りだけで安心して購入できました。写真も動画もたくさん送ってくれて、実車を見なくても納得の一台でした。</p><div class="review-footer"><span class="review-name">S.M 様</span><span class="review-meta">ランドクルーザー70 / 東京都</span></div></div>
+      <div class="card review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>リフトアップと全塗装をお願いしましたが、仕上がりが想像以上。カスタムのセンスが抜群です。</p><div class="review-footer"><span class="review-name">H.Y 様</span><span class="review-meta">ランドクルーザー60 / 大阪府</span></div></div>
+      <div class="card review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>大手ディーラーの見積もりより50万円以上安く、しかもカスタム込み。明朗会計で信頼できるお店です。</p><div class="review-footer"><span class="review-name">A.N 様</span><span class="review-meta">ランドクルーザー80 / 福岡県</span></div></div>
+      <div class="card review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>購入後のアフターフォローも手厚く、何かあればすぐに相談できる関係性がありがたいです。</p><div class="review-footer"><span class="review-name">K.I 様</span><span class="review-meta">ランドクルーザー70 / 広島県</span></div></div>
+      <div class="card review-card"><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div><p>初めてのランクル購入で不安でしたが、予算内で理想の一台を見つけてもらえました。全国納車も問題なし。</p><div class="review-footer"><span class="review-name">R.O 様</span><span class="review-meta">ランドクルーザー60 / 神奈川県</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICE ANCHOR ===== -->
+<section class="section bg-dark">
+  <div class="container">
+    <div class="section-heading">
+      <p class="font-ui">Price Comparison</p>
+      <h2 class="font-display">なぜ、この価格で提供できるのか</h2>
+    </div>
+    <div class="price-grid">
+      <div class="price-card competitor">
+        <div class="price-label">大手チェーン店</div>
+        <div class="price-value">380万円〜</div>
+        <ul class="price-list">
+          <li><span class="icon-x">&#10005;</span> 中間マージン・広告費が上乗せ</li>
+          <li><span class="icon-x">&#10005;</span> カスタムは別業者に外注</li>
+          <li><span class="icon-x">&#10005;</span> 担当者が頻繁に変わる</li>
+        </ul>
+      </div>
+      <div class="price-card ours">
+        <span class="price-badge">RECOMMENDED</span>
+        <div class="price-label">Cars Fukuoka</div>
+        <div class="price-value">200万円〜</div>
+        <ul class="price-list">
+          <li><span class="icon-check">&#10003;</span> 直販だから中間マージンなし</li>
+          <li><span class="icon-check">&#10003;</span> カスタム・整備・販売を一括対応</li>
+          <li><span class="icon-check">&#10003;</span> 専門スタッフが最初から最後まで担当</li>
+        </ul>
+      </div>
+    </div>
+    <p class="price-note">※ 価格は車両の状態・年式・カスタム内容によって異なります。詳しくはお問い合わせください。</p>
+  </div>
+</section>
+
+<!-- ===== NEWS ===== -->
+<section class="section bg-surface">
+  <div class="container">
+    <div class="section-heading">
+      <p class="font-ui">News</p>
+      <h2 class="font-display">お知らせ</h2>
+    </div>
+    <div style="max-width:800px;margin:0 auto;">
+      <div class="card news-item"><div class="news-date">2026.04.01</div><div><h3>ランドクルーザー70 再販モデル入庫しました</h3><p>人気の70系再販モデルが入庫しました。フルカスタム済みの一台です。詳しくはLINEよりお問い合わせください。</p></div></div>
+      <div class="card news-item"><div class="news-date">2026.03.15</div><div><h3>GWカスタムキャンペーン実施中</h3><p>ゴールデンウィークに向けて、リフトアップ・全塗装のカスタムキャンペーンを実施中。期間限定の特別価格でご提供します。</p></div></div>
+      <div class="card news-item"><div class="news-date">2026.03.01</div><div><h3>全国納車対応エリアを拡大しました</h3><p>ご要望の多かった北海道・沖縄エリアへの納車にも対応開始。陸送費のお見積もりもLINEで即日回答いたします。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SHOP INFO ===== -->
+<section id="shop" class="section bg-dark">
+  <div class="container">
+    <div class="section-heading">
+      <p class="font-ui">Shop Info</p>
+      <h2 class="font-display">店舗情報</h2>
+    </div>
+    <div class="shop-grid">
+      <div class="shop-table">
+        <table>
+          <tr><th>店名</th><td>Cars☆Fukuoka（株式会社CFS Trading）</td></tr>
+          <tr><th>住所</th><td>〒811-2131 福岡県粕屋郡宇美町貴船3-13-12</td></tr>
+          <tr><th>電話</th><td><a href="tel:092-719-0033">092-719-0033</a></td></tr>
+          <tr><th>営業</th><td>平日・土 9:00〜19:00 / 日・祝 10:00〜19:00</td></tr>
+          <tr><th>定休日</th><td>月曜日</td></tr>
+          <tr><th>スタッフ</th><td>4名（2級整備士資格保持者在籍）</td></tr>
+        </table>
+      </div>
+      <div class="shop-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.5!2d130.5076!3d33.5669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDM0JzAwLjgiTiAxMzDCsDMwJzI3LjQiRQ!5e0!3m2!1sja!2sjp!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Cars Fukuoka 地図"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq" class="section bg-surface">
+  <div class="container">
+    <div class="section-heading">
+      <p class="font-ui">FAQ</p>
+      <h2 class="font-display">よくあるご質問</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span>在庫にない車両も探してもらえますか？</span><span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">はい、全国のオークションや提携業者から、お客様のご希望に合う車両をお探しします。ランクル60/70/80系を中心に豊富なネットワークで対応いたします。</div></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span>遠方からの購入は可能ですか？</span><span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">全国納車に対応しています。LINEやビデオ通話での現車確認も可能です。陸送費は地域によって異なりますのでお気軽にご相談ください。</div></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span>ローンは利用できますか？</span><span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">各種オートローンに対応しています。お客様のご予算に合わせた最適なプランをご提案いたします。</div></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span>整備・保証はありますか？</span><span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">納車前に2級整備士による徹底点検を実施します。また、購入後のメンテナンス・車検にも対応しております。保証内容は車両によって異なりますのでお問い合わせください。</div></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span>カスタムの見積もりだけでもお願いできますか？</span><span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">もちろんです。LINEで具体的なカスタム内容をお伝えいただければ、概算見積もりをお出しします。ご来店いただければより詳細なお見積もりが可能です。</div></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span>表示価格以外に費用はかかりますか？</span><span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">車両本体価格以外に、登録諸費用・陸送費（遠方の場合）がかかります。全て事前にお見積もりをお出しし、ご納得いただいてから進めますのでご安心ください。</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA FINAL ===== -->
+<section class="section cta-band">
+  <div class="container">
+    <p class="font-ui">Get Started</p>
+    <h2 class="font-display">あなただけのランクルを手に入れよう</h2>
+    <p>在庫確認からカスタム相談まで、LINEひとつで完結。専門スタッフが丁寧にお答えします。</p>
+    <a href="https://lin.ee/XXXXXXX" target="_blank" rel="noopener" class="cta-btn">
+      <svg viewBox="0 0 24 24" class="line-icon"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596a.626.626 0 01-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.271.173-.51.43-.595a.62.62 0 01.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+      LINEで無料相談
+    </a>
+    <p class="loss-text">※ 在庫は常に変動しています。気になる車両はお早めにお問い合わせください</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">CARS<span>&#9733;</span>FUKUOKA</div>
+        <p class="footer-info">株式会社CFS Trading<br>〒811-2131 福岡県粕屋郡宇美町貴船3-13-12</p>
+      </div>
+      <div>
+        <h4>NAVIGATION</h4>
+        <ul class="footer-links">
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#custom">Custom</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#inventory">Stock</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>CONTACT</h4>
+        <div class="footer-contact">
+          <a href="tel:092-719-0033">092-719-0033</a><br>
+          平日・土 9:00〜19:00<br>
+          日・祝 10:00〜19:00<br>
+          定休日: 月曜日<br><br>
+          <a href="https://lin.ee/XXXXXXX" target="_blank" rel="noopener" class="nav-cta" style="display:inline-block;margin-top:4px;">LINE</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Cars Fukuoka / CFS Trading Inc. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- ===== MOBILE CTA ===== -->
+<div class="mobile-cta">
+  <a href="https://lin.ee/XXXXXXX" target="_blank" rel="noopener" class="cta-btn">
+    <svg viewBox="0 0 24 24" class="line-icon" style="width:18px;height:18px;"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596a.626.626 0 01-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.271.173-.51.43-.595a.62.62 0 01.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+    LINEで相談
+  </a>
+  <a href="tel:092-719-0033" class="phone-btn" aria-label="電話">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+  </a>
+</div>
+
+<script>
+// Hero slideshow
+let cur = 0;
+const slides = document.querySelectorAll('.hero-slide');
+const dots = document.querySelectorAll('.hero-dot');
+function goSlide(n) {
+  slides[cur].style.opacity = '0';
+  dots[cur].classList.remove('active');
+  cur = n;
+  slides[cur].style.opacity = '1';
+  dots[cur].classList.add('active');
+}
+setInterval(() => goSlide((cur + 1) % slides.length), 5000);
+
+// FAQ accordion
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const answer = item.querySelector('.faq-a');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => {
+    i.classList.remove('open');
+    i.querySelector('.faq-a').style.maxHeight = '0';
+  });
+  if (!isOpen) {
+    item.classList.add('open');
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+  }
+}
+</script>
+
+</body>
+</html>
