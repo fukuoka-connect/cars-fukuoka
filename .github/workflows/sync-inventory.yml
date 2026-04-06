@@ -1,0 +1,42 @@
+name: Sync Inventory from Notion
+
+on:
+  # 毎日9時と18時（JST）に自動実行
+  schedule:
+    - cron: '0 0,9 * * *'  # UTC 0:00, 9:00 = JST 9:00, 18:00
+  # 手動実行も可能
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Sync inventory from Notion
+        env:
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+        run: node scripts/sync-inventory.js
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --quiet index.html && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push changes
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "在庫情報を自動更新 ($(date '+%Y-%m-%d %H:%M'))"
+          git push
